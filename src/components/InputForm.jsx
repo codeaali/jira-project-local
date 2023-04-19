@@ -9,6 +9,7 @@ const InputForm = () => {
   const { tasks } = data;
   const handleInput = (event) => {
     setInput(event.target.value)
+    
   }
 
   const handleSubmit = () => {
@@ -18,6 +19,7 @@ const InputForm = () => {
       category: "pending",
       task: input}]
     setData({...data,tasks:newArr})
+    setInput('')
   }
 
   return (

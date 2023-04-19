@@ -24,7 +24,7 @@ const Completed = () => {
                    return item.category == 'completed' ? (
                         <div className="taskItem" key={item.id}>
                         <p>{item.task}</p>
-                        <button onClick={() => handleDel(item.id)} className="taskButton move">Move</button>
+                        <button onClick={() => handleDel(item.id)} className="taskButton move">Move to QA</button>
                         </div>
                     ) : null
                     
