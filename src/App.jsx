@@ -11,6 +11,7 @@ import Pending from './components/Pending'
 import { input } from './data/data'
 
 export const DataContext = createContext();
+export const DataSetterContext = createContext();
 function App() {
   const [data, setData] = useState(input)
   
@@ -20,12 +21,14 @@ function App() {
 
       <Header />
       <DataContext.Provider value={data}>
+      <DataSetterContext.Provider value={setData}>
       <InputForm />
       <Board>
         <Pending />
         <Ongoing />
         <Completed />
       </Board>
+      </DataSetterContext.Provider>
       </DataContext.Provider>
       
       <Footer />

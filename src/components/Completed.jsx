@@ -1,20 +1,36 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { DataContext, DataSetterContext } from '../App';
 
 const Completed = () => {
+    const data = useContext(DataContext)
+    const setData = useContext(DataSetterContext)
+    const { tasks } = data;
+    const handleDel = (id) => {
+        const newData = tasks?.filter((item)=>{
+             return (item.id != id)
+            
+        })
+         setData({...data,tasks:newData});
+         console.log({newData})
+
+    }
   return (
     <div class="taskColumn">
             <div class="columnHeader">
                 <h3>Completed</h3>
             </div>
             <div class="taskItems">
-                <div class="taskItem">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, dicta.</p>
-                    <button class="taskButton delete">Delete</button>
-                </div>
-                <div class="taskItem">
-                    <p>Asit amet consectetur adipi orem ipsum dolor sicing elit. Quidem, dicta.</p>
-                    <button class="taskButton delete">Delete</button>
-                </div>
+            {tasks?.map((item)=>{
+                   return item.category == 'completed' ? (
+                        <div className="taskItem" key={item.id}>
+                        <p>{item.task}</p>
+                        <button onClick={() => handleDel(item.id)} className="taskButton move">Move</button>
+                        </div>
+                    ) : null
+                    
+                })}
+               
+                
             </div>
         </div>
   )

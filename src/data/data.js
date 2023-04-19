@@ -4,7 +4,7 @@ export const input = {
       {
         id: 2500,
         category: "pending",
-        task: "pending task Lorem ipsum dolor sit amet consectetur adipisicing el minima.",
+        task: "task1 Lorem ipsum dolor sit amet consectetur adipisicing el minima.",
       },
       {
         id: 2501,
@@ -14,22 +14,22 @@ export const input = {
       {
         id: 2502,
         category: "pending",
-        task: "pending , eum aliquam labore ratione maxime voluptatem.",
+        task: "3 task , eum aliquam labore ratione maxime voluptatem.",
       },
       {
         id: 2503,
         category: "completed",
-        task: "Lorem ipsum dolor sit amet consectetur adipisicing el minima.",
+        task: "4Lorem ipsum dolor sit amet consectetur adipisicing el minima.",
       },
       {
         id: 2504,
         category: "completed",
-        task: "Adeleniti beatae commodi, quo consequun liquidisicing el minima.",
+        task: "5 Adeleniti beatae commodi, quo consequun liquidisicing el minima.",
       },
       {
         id: 2505,
         category: "ongoing",
-        task: "Lorem ipsum dolor sit amet consectetur adipisicing el minima.",
+        task: "6 Lorem ipsum dolor sit amet consectetur adipisicing el minima.",
       },
     ],
   };
